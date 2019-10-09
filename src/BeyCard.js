@@ -1,10 +1,11 @@
 import React from "react";
 
-const BeyCard = () => {
+
+const BeyCard = (props) => {
   return (
-    <div>
-      <h3>{/*Bey name goes here*/}</h3>
-      {/*image tag goes here*/}
+    <div onClick={() => props.flipFav(props.info)} >
+      <h3>{props.info.name}</h3>
+      <img src={props.info.img} />
     </div>
   );
 };
